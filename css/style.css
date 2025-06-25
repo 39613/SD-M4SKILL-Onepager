@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+:root {
+    --backgroundcolor: #403a3a;
+    --maincolor: #5b504b;
+}
+
+*,
+*::before,
+*::after {
+    /* alles reseten*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100vh;
+    font-size: 1.6rem;
+}
+
+html {
+    /* de html Font size op 10 pixels zetten. 1rem => 10px */
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+    background-color: var(--backgroundcolor);
+
+
+}
+
+.page_header {
+    width: 100%;
+    height: 13vh;
+    background-color: var(--backgroundcolor);
+    display: flex;
+    justify-content: center;
+}
+
+.page-header_navbar {
+    padding-top: 2.4rem;
+    padding-bottom: 2rem;
+    height: 10vh;
+    width: 100%;
+    background-color: #403a3ad0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav_button {
+
+    text-decoration: none;
+    background-color: #716a5cd0;
+    width: fit-content;
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 2rem;
+    color: white;
+    border-radius: 2rem;
+    transition: scale 0.6s;
+
+}
+
+.nav_button:hover {
+    scale: 1.4;
+    background-color: #635d50d0;
+}
+
+
+.Main-Section__home,
+.Main-Section__info,
+.Main-Section__from {
+    opacity: 0;
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    margin-bottom: 5rem;
+}
+
+.Main-Section__home {
+    background-color: var(--backgroundcolor);
+
+}
+
+.Section-home__article {
+    grid-column: 2/12;
+    grid-row: 1/13;
+    background-image: url(/img/IMG_0106.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+
+.home-article__img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.Main-Section__info {
+    background-color: var(--backgroundcolor);
+
+}
+
+.info_article {
+    display: flex;
+    grid-column: 2/12;
+    grid-row: 1/13;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/img/code.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: rgba(0, 0, 0, 0.473);
+    background-blend-mode: multiply;
+
+}
+
+.info-article_div {
+    background-color: var(--maincolor);
+    width: 75%;
+    min-height: 75%;
+    padding: 2rem;
+    border-radius: 2rem;
+
+}
+
+.info-article_div_ul {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 5rem;
+    margin-left: 9rem;
+}
+
+.info-article-ul_li {
+    width: fit-content;
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 1rem;
+    border-bottom: solid black 2px;
+}
+
+.info-article-ul_p {
+    font-size: 1.7rem;
+    color: rgb(193, 193, 193);
+    width: 67%;
+    margin-bottom: 2rem;
+    font-family: "Red Hat Text", sans-serif;
+}
+
+
+.Main-Section__from {
+    background-color: var(--backgroundcolor);
+
+}
+
+.Section-from__article {
+    grid-column: 2/12;
+    grid-row: 1/13;
+    background-color: var(--backgroundcolor);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.article-form-div {
+    background-color: var(--maincolor);
+    width: 75%;
+    min-height: 75%;
+    padding: 2rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-div__from {
+    display: flex;
+    flex-direction: column;
+    height: 40rem;
+    width: 70%;
+    background-color: white;
+    padding: 1rem;
+
+}
+
+.form__naam {
+    width: 30%;
+    padding: 0.6rem;
+}
+
+.form__email {
+    width: 40%;
+    padding: 0.6rem;
+
+}
+
+.form__comment {
+    width: 70%;
+    height: 13rem;
+    padding: 0.6rem;
+    margin-bottom: 1rem;
+}
+
+.form__submit {
+    width: 10%;
+    padding: 0.6rem;
+    transition: 0.6s;
+}
+
+.form__reset {
+    width: 10%;
+    padding: 0.6rem;
+    transition: 0.6s;
+}
+
+.form__submit:hover,
+.form__reset:hover {
+    scale: 1.08;
+}
+
+
+
+.a-popup {
+    animation-name: popup;
+    animation-duration: 10s;
+    animation-fill-mode: backwards;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popup {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
